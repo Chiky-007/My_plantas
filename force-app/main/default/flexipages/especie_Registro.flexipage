@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata"
+           apiVersion="59.0"
+           type="RecordPage">
+    <masterLabel>especie_Registro</masterLabel>
+    <template>OneRegion</template>
+    <regions>
+        <name>mainRegion</name>
+        <components>
+            <componentInstance>
+                <componentName>force:recordView</componentName>
+            </componentInstance>
+        </components>
+    </regions>
+    <entity>My_Plants__c</entity> <!-- Reemplaza con el nombre de tu objeto si no es este -->
+</FlexiPage>

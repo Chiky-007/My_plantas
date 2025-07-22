@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <!-- Ajusta la versión si tu org usa una API diferente -->
+    <apiVersion>64.0</apiVersion>
+
+    <!-- Etiquetas básicas -->
+    <masterLabel>especie_Registro</masterLabel>
+    <description>Página de registro para el objeto especie__c</description>
+    <type>RecordPage</type>
+    <entity>especie__c</entity>
+
+    <!-- Plantilla de página de registro estándar para escritorio -->
+    <template>
+        <name>flexipage:recordHomeTemplateDesktop</name>
+    </template>
+
+    <!-- Regiones de la página -->
+    <regions>
+
+        <!-- Encabezado (highlights) -->
+        <region>
+            <name>header</name>
+            <components>
+                <componentInstance>
+                    <componentName>force:highlightsPanel</componentName>
+                </componentInstance>
+            </components>
+        </region>
+
+        <!-- Cuerpo principal con un conjunto de pestañas -->
+        <region>
+            <name>main</name>
+            <components>
+                <componentInstance>
+                    <componentName>flexipage:tabset</componentName>
+                    <componentInstanceProperties>
+                        <name>label</name>
+                        <value>Tabs</value>
+                    </componentInstanceProperties>
+                    <componentInstanceProperties>
+                        <name>tabs</name>
+                        <value>default</value>
+                    </componentInstanceProperties>
+                </componentInstance>
+            </components>
+        </region>
+
+        <!-- Barra lateral con texto enriquecido -->
+        <region>
+            <name>sidebar</name>
+            <components>
+                <componentInstance>
+                    <componentName>flexipage:richText</componentName>
+                    <componentInstanceProperties>
+                        <name>richTextValue</name>
+                        <value>&lt;p&gt;Las plantas son mágicas&lt;/p&gt;</value>
+                    </componentInstanceProperties>
+                </componentInstance>
+            </components>
+        </region>
+
+    </regions>
+</FlexiPage>
