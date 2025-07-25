@@ -1,14 +1,38 @@
 <template>
-    <lightning-card title={specie.Name} icon-name="custom:custom5">
-        <lightning-button label="View Details" slot="actions"></lightning-button>
-        <!-- body start -->
-        <p class="slds-var-p-horizontal_small">{specie.Description}</p>
-        <img
-            class="specie slds-align_absolute-center slds-var-m-around_medium"
-            src={specie.Image_URL__c}
-            alt={specie.Name}
-        />
-        <p class="slds-var-p-horizontal_small">{specie.Location__c}</p>
-        <!-- body end -->
-    </lightning-card>
+    <template if:true={specie}>
+        <template if:true={specie.Name}>
+            <lightning-card title={specie.Name} icon-name="custom:custom5" class="plant-card">
+                <lightning-button 
+                    label="Ver detalles" 
+                    variant="brand" 
+                    slot="actions">
+                </lightning-button>
+                
+                <div class="slds-card__body slds-card__body_inner">
+                    <div class="plant-image-container slds-var-m-bottom_small">
+                        <img
+                            class="plant-image"
+                            src={specie.Image_URL__c}
+                            alt={specie.Name}
+                        />
+                    </div>
+                    
+                    <p class="slds-var-p-horizontal_small slds-var-m-bottom_small">
+                        {specie.Description__c}
+                    </p>
+                    
+                    <div class="location-info slds-var-p-horizontal_small">
+                        <lightning-icon 
+                            icon-name="utility:location" 
+                            size="x-small" 
+                            class="slds-var-m-right_xx-small">
+                        </lightning-icon>
+                        <span class="location-text">
+                            <strong>Ubicación:</strong> {specie.Location__c}
+                        </span>
+                    </div>
+                </div>
+            </lightning-card>
+        </template>
+    </template>
 </template>

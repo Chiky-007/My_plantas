@@ -1,0 +1,85 @@
+.plant-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 550px;
+    width: 100%;
+}
+
+.plant-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Expandir significativamente el header del card */
+.plant-card .slds-card__header {
+    padding: 1.5rem !important;
+    min-height: 120px !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    flex-direction: column !important;
+}
+
+.plant-card .slds-card__header-title {
+    color: #2c3e50 !important;
+    font-size: 1.5rem !important;
+    font-weight: bold !important;
+    white-space: normal !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    line-height: 1.4 !important;
+    overflow: visible !important;
+    text-overflow: unset !important;
+    max-width: 100% !important;
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    flex: 1 !important;
+}
+
+.plant-card .slds-card__header-title-container {
+    overflow: visible !important;
+    flex: 1 !important;
+    width: 100% !important;
+    display: block !important;
+}
+
+.plant-card .slds-card__header-link {
+    overflow: visible !important;
+    white-space: normal !important;
+    display: block !important;
+    width: 100% !important;
+}
+
+.plant-card .slds-card__body {
+    color: #2c3e50 !important;
+    padding: 1.5rem !important;
+}
+
+.plant-image {
+    width: 100%;
+    height: auto;
+    max-height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 0.5rem 0;
+}
+
+.location-info {
+    display: flex;
+    align-items: center;
+    color: #34495e !important;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+.location-text {
+    color: #34495e !important;
+    line-height: 1.4;
+}
