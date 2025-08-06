@@ -2,22 +2,56 @@
     height: 100%;
     min-height: 550px;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
 }
 
 h1 {
     color: #2e844a;
     font-weight: bold;
     margin-bottom: 2rem;
+    text-align: center;
 }
 
-.slds-layout {
-    justify-content: center;
+.slds-grid {
+    justify-content: flex-start;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
 /* Dar mucho más espacio a las tarjetas */
-.slds-layout-item {
+.slds-col {
     min-height: 550px;
     padding: 1rem !important;
+    display: flex;
+    justify-content: center;
+}
+
+/* Responsive breakpoints para mejor uso del espacio */
+@media (min-width: 768px) {
+    .slds-medium-size_1-of-2 {
+        width: 50% !important;
+    }
+}
+
+@media (min-width: 1024px) {
+    .slds-large-size_1-of-3 {
+        width: 33.333% !important;
+    }
+}
+
+@media (min-width: 1440px) {
+    .slds-x-large-size_1-of-4 {
+        width: 25% !important;
+    }
+}
+
+@media (min-width: 1920px) {
+    .slds-x-large-size_1-of-4 {
+        width: 20% !important;
+    }
 }
 
 .specie-title {

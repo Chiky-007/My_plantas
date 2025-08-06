@@ -2,11 +2,13 @@
     <template if:true={specie}>
         <template if:true={specie.Name}>
             <lightning-card title={specie.Name} icon-name="custom:custom5" class="plant-card">
-                <lightning-button 
-                    label="Ver detalles" 
-                    variant="brand" 
-                    slot="actions">
-                </lightning-button>
+                <div slot="actions">
+                    <lightning-button 
+                        label="Ver detalles" 
+                        variant="brand"
+                        data-id="detail-button">
+                    </lightning-button>
+                </div>
                 
                 <div class="slds-card__body slds-card__body_inner">
                     <div class="plant-image-container slds-var-m-bottom_small">
@@ -30,6 +32,31 @@
                         <span class="location-text">
                             <strong>Ubicación:</strong> {specie.Location__c}
                         </span>
+                    </div>
+                    
+                    <div class="environment-icons">
+                        <template if:true={isOutdoor}>
+                            <!-- Mostrar icono sol -->
+                            <div class="environment-icon">
+                                <lightning-icon
+                                    icon-name="utility:dayview"
+                                    alternative-text="Outdoors"
+                                    title="Outdoors"
+                                    size="small"
+                                ></lightning-icon>
+                            </div>
+                        </template>
+                        <template if:true={isIndoor}>
+                            <!-- Mostrar icono casa -->
+                            <div class="environment-icon">
+                                <lightning-icon
+                                    icon-name="standard:home"
+                                    alternative-text="Indoors"
+                                    title="Indoors"
+                                    size="small"
+                                ></lightning-icon>
+                            </div>
+                        </template>
                     </div>
                 </div>
             </lightning-card>

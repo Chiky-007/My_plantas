@@ -8,6 +8,7 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     min-height: 550px;
     width: 100%;
+    max-width: 100%;
 }
 
 .plant-card:hover {
@@ -82,4 +83,25 @@
 .location-text {
     color: #34495e !important;
     line-height: 1.4;
+}
+
+.environment-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.environment-icon {
+    background: rgba(52, 152, 219, 0.1);
+    border-radius: 50%;
+    padding: 0.8rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease;
+}
+
+.environment-icon:hover {
+    transform: scale(1.1);
 }
