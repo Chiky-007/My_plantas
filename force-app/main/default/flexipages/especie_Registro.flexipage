@@ -12,5 +12,5 @@
             </componentInstance>
         </components>
     </regions>
-    <entity>My_Plants__c</entity> 
+    <entity>My_Plants__c</entity>
 </FlexiPage>
